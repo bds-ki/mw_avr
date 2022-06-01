@@ -1,0 +1,41 @@
+{
+	"packages": [{
+		"name": "MW avr",
+		"maintainer": "Manna Team",
+		"websiteURL": "https://github.com/bedreski2/mw_avr",
+		"email": "",
+		"help": {
+			"online": ""
+		},
+		"platforms": [{
+			"name": "MW avr",
+			"architecture": "avr",
+			"version": "1.0.0",
+			"category": "Contributed",
+			"url": "https://github.com/bedreski2/mw_avr/releases/download/v1.0.0/mw_avr.zip",
+			"archiveFileName": "mw_avr.zip",
+			"checksum": "SHA-256:77768fe9ed9f7dd8986232c1cb30ad7606d084cc61d5df274421b13fabd0195c",
+			"size": "1682096",
+			"help": {
+				"online": ""
+			},
+			"boards": [{
+				"name": "MW avr"
+			}],
+			"toolsDependencies": [
+				{
+					"packager": "arduino",
+					"name": "avr-gcc",
+					"version": "4.8.1-arduino5"
+				},
+				{
+					"packager": "arduino",
+					"name": "avrdude",
+					"version": "6.0.1-arduino5"
+				}	
+			]
+		}],
+		
+		"tools": [ ]
+	}]
+}
