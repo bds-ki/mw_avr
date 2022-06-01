@@ -1,2 +1,10 @@
 name=MW avr
 version=1.0.0
+
+###### Preprocessor
+#--------------------------
+preproc.includes.flags               = -w -x c++ -M -MG -MP
+recipe.preproc.includes              = "{tools.arm_none_eabi_gcc.path}{tools.arm_none_eabi_gcc.g++}" {preproc.includes.flags} {tools.arm_none_eabi_gcc.cpp.cflags} {tools.arm_none_eabi_gcc.cpp.cppflags} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} {tools.arm_none_eabi_gcc.cpp.defines} {includes} {tools.arm_none_eabi_gcc.cpp.includes} "{source_file}"
+preproc.macros.flags                 = -w -x c++ -E -CC
+recipe.preproc.macros                = "{tools.arm_none_eabi_gcc.path}{tools.arm_none_eabi_gcc.g++}" {preproc.macros.flags} {tools.arm_none_eabi_gcc.cpp.cflags} {tools.arm_none_eabi_gcc.cpp.cppflags} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} {tools.arm_none_eabi_gcc.cpp.defines} {includes} {tools.arm_none_eabi_gcc.cpp.includes} "{source_file}" -o "{preprocessed_file_path}"
+
