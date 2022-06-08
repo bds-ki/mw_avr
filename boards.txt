@@ -10,7 +10,7 @@ mannaWUI.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.xSer
 
 mannaWUI.menu.pnum.mannaWUI_F407VG=STM32F407VGT
 mannaWUI.menu.pnum.mannaWUI_F407VG.node=mannaWUI_F407VG
-mannaWUI.menu.pnum.mannaWUI_F407VG.upload.maximum_size=1048576
+mannaWUI.menu.pnum.mannaWUI_F4z07VG.upload.maximum_size=1048576
 mannaWUI.menu.pnum.mannaWUI_F407VG.upload.maximum_data_size=131072
 mannaWUI.menu.pnum.mannaWUI_F407VG.build.board=mannaWUI_F407VG
 mannaWUI.menu.pnum.mannaWUI_F407VG.build.variant=STM32F4xx/F407V(E-G)T_F417V(E-G)T
