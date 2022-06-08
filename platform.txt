@@ -2,7 +2,7 @@ name=MW avr
 version=1.0.0
 
 ## Compiler global definitions
-compiler.path={runtime.ide.path}/tools/avr/bin/
+compiler.path={runtime.ide.path}\hardware\tools\avr\bin\
 compiler.c.cmd=avr-gcc
 compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -MMD
 compiler.ar.cmd=avr-ar
