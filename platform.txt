@@ -13,6 +13,8 @@ compiler.size.cmd=avr-size
 
 compiler.libraries.ldflags=
 
+build.mcu=avr1
+
 tools.avrdude.path={runtime.tools.avrdude.path}
 tools.avrdude.cmd.path={path}/bin/avrdude
 tools.avrdude.config.path={path}/etc/avrdude.conf
@@ -24,7 +26,7 @@ tools.avrdude.upload.pattern="{cmd.path}" "-C{config.path}" {upload.verbose} -p{
 
 ## Compile c files
 ##The build.mcu is in specified the boards.txt file
-recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} -mmcu=avr1 -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
 recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} "{archive_file_path}" "{object_file}"
 
 ## Combine gc-sections, archives, and objects
