@@ -7,6 +7,7 @@ mannaWUI.build.core=arduino
 mannaWUI.build.board=mannaWUI
 mannaWUI.build.variant_h=variant_{build.board}.h
 mannaWUI.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial}
+mannaWUI.build.mcu=cortex-m4
 
 mannaWUI.menu.pnum.mannaWUI_F407VG=STM32F407VGT
 mannaWUI.menu.pnum.mannaWUI_F407VG.node=mannaWUI_F407VG
